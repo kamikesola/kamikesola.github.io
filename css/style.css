@@ -1,0 +1,249 @@
+body {
+  background-color: #f2f2f2;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.nav {
+  position: fixed;
+  width: 12%;
+  height: 100%;
+  background: #ccc;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ddd;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.nav h1 {
+  font-family: STXihei;
+}
+.nav .portrait {
+  width: 250px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  height: 250px;
+  align-self: center;
+  margin-top: 25%;
+  overflow: hidden;
+}
+.nav .portrait img {
+  transition: all 1s;
+}
+.nav .portrait img:hover {
+  transform: rotate(360deg);
+}
+.nav .menu {
+  list-style: none;
+  width: 100%;
+  margin-top: 50%;
+}
+.nav .menu .menu-item-link {
+  color: #000;
+  font-size: 1em;
+}
+.nav .menu .menu-item-link:hover {
+  color: #368ccb;
+}
+.nav .rss {
+  width: 100%;
+  margin-top: 25%;
+  height: 84px;
+}
+.nav .rss a {
+  font-size: 1em;
+}
+.nav .rss a:hover {
+  color: #368ccb;
+  text-decoration: none;
+}
+.nav .rss:hover {
+  color: #000;
+  border: 1px solid #ddd;
+}
+.nav .social {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background: #a9a9a9;
+  border: 1px solid #ddd;
+}
+.nav .social #github {
+  width: 80px;
+  padding-right: 0px;
+}
+.nav .social img {
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+}
+.post {
+  margin: 50px;
+  padding: 50px;
+  padding-top: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ddd;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+.post .post-title .title {
+  font-size: 1.5em;
+  font-family: STXihei;
+  color: #ddd;
+}
+.post .post-data {
+  position: absolute;
+  margin: 0;
+  right: 10px;
+  color: #ddd;
+}
+#content {
+  position: absolute;
+  left: 12%;
+  height: 100%;
+  width: 80%;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+}
+.posts .post {
+  margin-bottom: 25px;
+}
+.posts .post:first-child {
+  margin-top: 0;
+}
+.posts .post-title .post-title-link {
+  font-size: 1.2em;
+  font-family: STXihei;
+  color: #ddd;
+  text-decoration: none;
+}
+.posts .post-content {
+  font-size: 0.8em;
+}
+.posts .post-content a {
+  color: #368ccb;
+  text-decoration: none;
+}
+.posts .post-read {
+  font-size: 0.9em;
+}
+.posts .post-read a {
+  text-decoration: none;
+}
+.posts .post-meta {
+  color: #bababa;
+}
+figure {
+  background: #2d2d2d;
+  margin: 0;
+  padding: 15px;
+  border-style: solid;
+  border-color: color-border;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #ccc;
+  line-height: 1em;
+}
+figure .gutter {
+  color: #666;
+  font-size: 0.85em;
+  font-family: font-mono;
+}
+figure .code {
+  font-family: font-mono;
+  background: color-background;
+  text-shadow: 0 1px #fff;
+  padding: 0 0.3em;
+}
+.comment,
+.title {
+  color: #999;
+}
+.variable,
+.attribute,
+.tag,
+.regexp,
+.ruby .constant,
+.xml .tag .title,
+.xml .pi,
+.xml .doctype,
+.html .doctype,
+.css .id,
+.css .class,
+.css .pseudo {
+  color: #f2777a;
+}
+.number,
+.preprocessor,
+.built_in,
+.literal,
+.params,
+.constant {
+  color: #f99157;
+}
+.class,
+.ruby .class .title,
+.css .rules .attribute {
+  color: #9c9;
+}
+.string,
+.value,
+.inheritance,
+.header,
+.ruby .symbol,
+.xml .cdata {
+  color: #9c9;
+}
+.css .hexcolor {
+  color: #6cc;
+}
+.function,
+.python .decorator,
+.python .title,
+.ruby .function .title,
+.ruby .title .keyword,
+.perl .sub,
+.javascript .title,
+.coffeescript .title {
+  color: #69c;
+}
+.keyword,
+.javascript .function {
+  color: #c9c;
+}
+.archives {
+  margin: 1em auto;
+  padding: 30px 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ddd;
+}
+.archives .post-archive {
+  list-style: none;
+  padding: 0;
+}
+.archives .post-archive .post-item {
+  margin: 5px 0;
+}
+.archives .post-archive .post-item .post-date {
+  display: inline-block;
+  margin-right: 10px;
+  color: #bababa;
+}
+.archives .post-archive .post-item .post-post_title {
+  color: #368ccb;
+  text-decoration: none;
+}
