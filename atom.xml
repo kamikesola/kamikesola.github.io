@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.kamike.cn/"/>
-  <updated>2019-01-07T09:26:05.220Z</updated>
+  <updated>2019-01-16T05:51:37.927Z</updated>
   <id>blog.kamike.cn/</id>
   
   <author>
@@ -21,19 +21,22 @@
     <link href="blog.kamike.cn/hello-world/"/>
     <id>blog.kamike.cn/hello-world/</id>
     <published>2018-12-28T09:10:47.441Z</published>
-    <updated>2019-01-07T09:26:05.220Z</updated>
+    <updated>2019-01-16T05:51:37.927Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'Hello World!'</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'Hello World!'</span>);</span><br></pre></td></tr></table></figure><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;spa
-      
+      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;alert(&lt;span class=&quot;string&quot;&gt;&#39;Hello World!&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
+      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="test" scheme="blog.kamike.cn/tags/test/"/>
+    
+      <category term="输出" scheme="blog.kamike.cn/tags/%E8%BE%93%E5%87%BA/"/>
     
   </entry>
   
