@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>最长回文子串</title>
+      <link href="/dp/"/>
+      <url>/dp/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+          <category> 动态规划 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>总结java反射(二)</title>
       <link href="/reflect2/"/>
       <url>/reflect2/</url>
