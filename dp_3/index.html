@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: 动态规划 | kamike</title>
+  <title>通配符匹配 | kamike</title>
   
   
 
@@ -166,57 +166,16 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'分类 : 动态规划'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
+            <article id="post" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+  
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      <h2 class="title">
-          <a href="/dp_4/">
-              
-                  编辑距离
-              
-          </a>
-      </h2>
+      
+          <h1 class="title">通配符匹配</h1>
+      
     
 
     <div class="new-meta-box">
@@ -248,359 +207,118 @@
         
       
       
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p><img src="https://s2.ax1x.com/2019/03/29/ABVgl6.png" alt="ABVgl6.png"><br>
         
-            <div class="readmore">
-                <a href="/dp_4/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-            </div>
-        
-    </p></section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/dp_3/">
-              
-                  通配符匹配
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="/blog.kamike.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            kamike
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-29
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据结构/动态规划/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据结构&nbsp;/&nbsp;动态规划
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
             </a>
           </div>
         
       
       
-      
     </div>
     <hr>
   </div>
 </section>
 
     <section class="article typo">
-        <p><img src="https://s2.ax1x.com/2019/03/29/ABFFC6.png" alt="ABFFC6.png"><br>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="https://s2.ax1x.com/2019/03/29/ABFFC6.png" alt="ABFFC6.png"><br><a id="more"></a></p>
+<h3 id="Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’"><a href="#Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’" class="headerlink" title="Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’."></a>Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’.</h3><p>‘?’ Matches any single character.<br>‘*’ Matches any sequence of characters (including the empty sequence).</p>
+<p>The matching should cover the entire input string (not partial).</p>
+<p>Note:</p>
+<pre><code>s could be empty and contains only lowercase letters a-z.
+p could be empty and contains only lowercase letters a-z, and characters like ? or *.
+</code></pre><p>Example 1:</p>
+<p>Input:<br>s = “aa”<br>p = “a”<br>Output: false<br>Explanation: “a” does not match the entire string “aa”.</p>
+<p>Example 2:</p>
+<p>Input:<br>s = “aa”<br>p = “<em>“<br>Output: true<br>Explanation: ‘</em>‘ matches any sequence.</p>
+<p>Example 3:</p>
+<p>Input:<br>s = “cb”<br>p = “?a”<br>Output: false<br>Explanation: ‘?’ matches ‘c’, but the second letter is ‘a’, which does not match ‘b’.</p>
+<p>Example 4:</p>
+<p>Input:<br>s = “adceb”<br>p = “<em>a</em>b”<br>Output: true<br>Explanation: The first ‘<em>‘ matches the empty sequence, while the second ‘</em>‘ matches the substring “dce”.</p>
+<p>Example 5:</p>
+<p>Input:<br>s = “acdcb”<br>p = “a*c?b”<br>Output: false</p>
+<h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>与前一道<a href="http://blog.kamike.cn/dp_1/">表达式匹配</a>类似，不过比那道要简单.<br>给你两个字符串s和p,要求s和P能够匹配,‘？’表示能与任何字符匹配,’*’表示一个任何的序列，包括空序列.<br>我们还是用动态规划来做.</p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>我们定义dp[i][j]为p的区间[0,i]与s的区间[0,j]是否匹配.<br>我们有两种情况:<br>1.dp[i][j]=dp[i-1][j] || (j&gt;0 &amp;&amp; dp[i][j-1]) || i==1,如果p[i-1]==’<em>‘.我们假设p[0…i-1]与s[0…j]已正确匹配,那么’</em>‘就代表空序列使得p[0…i]与s[0…j]继续匹配，我们又假设p[0…i]与s[0…j-1]已匹配,那么’*’继续延长序列使得p[0…i]与s[0…j]继续匹配.<br>2.dp[i][j]=(j&gt;0 &amp;&amp; dp[i-1][j-1] &amp;&amp; (p.charAt(i-1)==s.charAt(j-1) || p.charAt(i-1)==’?’)),如果p[i-1]==s[j-1]或p[i-1]==’?’.我们假设p[0…i-1]与s[0…j-1]已正确匹配,那么p[0…i]与s[0…j]匹配的充要条件就是p[i]=s[j].</p>
+<p>以下是代码:<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public boolean isMatch(String s,String p)</span><br><span class="line">&#123;</span><br><span class="line">    int m=p.<span class="built_in">length</span>();</span><br><span class="line">    int n=s.<span class="built_in">length</span>();</span><br><span class="line">    int[][] dp=new int[m+<span class="number">1</span>][n+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=m;<span class="built_in">i</span>++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">0</span>;<span class="built_in">j</span>&lt;=n;<span class="built_in">j</span>++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'*'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>] || (<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span>][<span class="built_in">j</span><span class="number">-1</span>]) || <span class="built_in">i</span>==<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=(<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>] &amp;&amp; (p.chaAt(<span class="built_in">i</span><span class="number">-1</span>)==s.charAt(<span class="built_in">j</span><span class="number">-1</span>) || p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'?'</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[m][n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      </div>
         
-            <div class="readmore">
-                <a href="/dp_3/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-29T20:28:21+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    2019-03-29
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/dp/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;dp</a></div>
+              
+              
             </div>
+          </section>
         
 
         
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/dp_4/" rel="prev" title="编辑距离">
+                                  
+                                      编辑距离
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/dp/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>dp</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/dp_2/" rel="prev" title="最长合法括号">
+                                    
+                                        最长合法括号
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/dp/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>dp</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
-    </p></section>
+
+    </section>
+
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/dp_2/">
-              
-                  最长合法括号
-              
-          </a>
-      </h2>
-    
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="/blog.kamike.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            kamike
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-27
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据结构/动态规划/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据结构&nbsp;/&nbsp;动态规划
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p><img src="https://s2.ax1x.com/2019/03/28/AwB7Sx.png" alt="AwB7Sx.png"><br>
-        
-            <div class="readmore">
-                <a href="/dp_2/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-            </div>
-        
-    </p></section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/dp_1/">
-              
-                  表达式匹配
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="/blog.kamike.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            kamike
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-26
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据结构/动态规划/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据结构&nbsp;/&nbsp;动态规划
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p><img src="https://s2.ax1x.com/2019/03/27/Aa26Mt.png" alt="Aa26Mt.png"><br>
-        
-            <div class="readmore">
-                <a href="/dp_1/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-            </div>
-        
-    </p></section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/dp/">
-              
-                  最长回文子串
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="/blog.kamike.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            kamike
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-24
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据结构/动态规划/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据结构&nbsp;/&nbsp;动态规划
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p><img src="https://s2.ax1x.com/2019/03/26/AN7dl4.png" alt="AN7dl4.png"><br>
-        
-            <div class="readmore">
-                <a href="/dp/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-            </div>
-        
-    </p></section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
-
-
-
-
-
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
     <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -638,9 +356,22 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-  
 
 
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+
+
+<script>
+    window.subData = {
+        title: '通配符匹配',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -762,6 +493,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="pure">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content pure">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’"><span class="toc-text">Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’.</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析"><span class="toc-text">题意分析:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-text">动态规划</span></a></li></ol>
+    </li></div>
+  </section>
+
 
       
     
