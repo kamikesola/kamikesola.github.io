@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>编辑距离 | kamike</title>
+  <title>不同的二叉搜索树Ⅰ和Ⅱ | kamike</title>
   
   
 
@@ -174,7 +174,7 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">编辑距离</h1>
+          <h1 class="title">不同的二叉搜索树Ⅰ和Ⅱ</h1>
       
     
 
@@ -191,7 +191,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-29
+            2019-04-07
           </a>
         </div>
       
@@ -226,56 +226,67 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="https://s2.ax1x.com/2019/03/29/ABVgl6.png" alt="ABVgl6.png"><br><a id="more"></a></p>
-<h3 id="Given-two-words-word1-and-word2-find-the-minimum-number-of-operations-required-to-convert-word1-to-word2"><a href="#Given-two-words-word1-and-word2-find-the-minimum-number-of-operations-required-to-convert-word1-to-word2" class="headerlink" title="Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2."></a>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.</h3><p>You have the following 3 operations permitted on a word:</p>
-<p>  1.Insert a character<br>  2.Delete a character<br>  3.Replace a character</p>
-<p>Example 1:</p>
-<p>Input: word1 = “horse”, word2 = “ros”<br>Output: 3<br>Explanation:<br>horse -&gt; rorse (replace ‘h’ with ‘r’)<br>rorse -&gt; rose (remove ‘r’)<br>rose -&gt; ros (remove ‘e’)</p>
-<p>Example 2:</p>
-<p>Input: word1 = “intention”, word2 = “execution”<br>Output: 5<br>Explanation:<br>intention -&gt; inention (remove ‘t’)<br>inention -&gt; enention (replace ‘i’ with ‘e’)<br>enention -&gt; exention (replace ‘n’ with ‘x’)<br>exention -&gt; exection (replace ‘n’ with ‘c’)<br>exection -&gt; execution (insert ‘u’)</p>
-<h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析"></a>题意分析</h2><p>给你两个字符串word1,word2.word1需要根据最少的操作来转换成word2,一共有3种操作:<br>1.replace:将字符串中某个字符转换成另一个字符.<br>2.remove:将字符串中某个字符移除.\<br>3.insert:将一个字符插入到字符串的任意位置.</p>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划:"></a>动态规划:</h3><p>我们定义dp[i][j]来代表word1[0…j]转变成word2[0…i]需要的最少操作.<br>接下来就是找出关系式:<br>先来考虑三种操作如何表示:<br>1.替换:假设word1[0…i-1]与word2[0…j-1]已完成最少转换操作,并且word1[i]!=word2[j],那么我们将word1[i]替换成word[j],也就是dp[i-1][j-1]+1.<br>2.删除:假设word1[0…i-1]与word2[0…j]已完成最少转换操作,那么我们将word1[i]删除后使得它们仍然相等,也就是dp[i-1][j]+1.<br>3.插入:假设word1[0…i]与word2[0…j-1]已完成最少转换操作,那么我们将word1[i]中插入一个元素使得它们仍然相等,也就是dp[i][j-1]+1.</p>
-<p>然后再考虑两种情况:<br>1.word1[i]==word2[j]:<br>那么需要取三种操作后的最小值(其中不需要替换操作):<br>dp[i][j]=min(dp[i-1][j-1],dp[i-1][j]+1,dp[i][j-1]+1)<br>2.word1[i]!=word2[j]:<br>也是取三种操作的最小值:<br>dp[i][j]=min(dp[i-1][j-1]+1,dp[i-1][j]+1,dp[i][j-1]+1)</p>
-<p>结合例子理解:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">word2\word1</th>
-<th style="text-align:center">h</th>
-<th style="text-align:center">o</th>
-<th style="text-align:center">r</th>
-<th style="text-align:center">s</th>
-<th style="text-align:center">e  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"> r</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">4  </td>
-</tr>
-<tr>
-<td style="text-align:center"> o</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">4  </td>
-</tr>
-<tr>
-<td style="text-align:center"> s</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3  </td>
-</tr>
-</tbody>
-</table>
-<p>以下是代码:<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public int minDistance(String word1,String word2)</span><br><span class="line">&#123;</span><br><span class="line">      int m=word1.<span class="built_in">length</span>();</span><br><span class="line">      int n=word2.<span class="built_in">length</span>();</span><br><span class="line">      int[][] dp=new int[m+<span class="number">1</span>][n+<span class="number">1</span>];</span><br><span class="line">      <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=n;<span class="built_in">i</span>++) dp[<span class="number">0</span>][<span class="built_in">i</span>]=<span class="built_in">i</span>;</span><br><span class="line">      <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=m;<span class="built_in">i</span>++) dp[<span class="built_in">i</span>][<span class="number">0</span>]=<span class="built_in">i</span>;</span><br><span class="line">      <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=m;<span class="built_in">i</span>++)</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">1</span>;<span class="built_in">j</span>&lt;=n;<span class="built_in">j</span>++)</span><br><span class="line">          &#123;</span><br><span class="line">              <span class="keyword">if</span>(word1.charAt(<span class="built_in">i</span><span class="number">-1</span>)==word2.charAt(<span class="built_in">j</span><span class="number">-1</span>))</span><br><span class="line">              &#123;</span><br><span class="line">                  dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=Math.<span class="built_in">min</span>(dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>],Math.<span class="built_in">min</span>(dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>]+<span class="number">1</span>,dp[<span class="built_in">i</span>][<span class="built_in">j</span><span class="number">-1</span>]+<span class="number">1</span>));</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="keyword">else</span></span><br><span class="line">              &#123;</span><br><span class="line">                  dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=Math.<span class="built_in">min</span>(dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>]+<span class="number">1</span>,Math.<span class="built_in">min</span>(dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>]+<span class="number">1</span>,dp[<span class="built_in">i</span>][<span class="built_in">j</span><span class="number">-1</span>]+<span class="number">1</span>));</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> dp[m][n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://imgchr.com/i/AfBvwQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/04/07/AfBvwQ.jpg" alt="AfBvwQ.jpg"></a><br><a id="more"></a></p>
+<h3 id="Given-n-how-many-structurally-unique-BST’s-binary-search-trees-that-store-values-1-…-n"><a href="#Given-n-how-many-structurally-unique-BST’s-binary-search-trees-that-store-values-1-…-n" class="headerlink" title="Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?"></a>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</h3><pre><strong>Input:</strong> 3
+<strong>Output:</strong> 5
+<strong>Explanation:
+</strong>Given <em>n</em> = 3, there are a total of 5 unique BST's:
+
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+</pre>
+
+<h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>给你一个整数n,输出[1…n]组成的所有可能的二叉搜索树的种数.</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>对于二叉树,我们选择不同的根结点,就会生成不同的二叉树:<br>所以我们可以循环遍历不同的根,作为根节点,并递归遍历左结点和右结点,并根据乘法原理计算种数.<br>以下是代码<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> numTrees(<span class="keyword">int</span> n)&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> <span class="keyword">sum</span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">       <span class="keyword">sum</span>+=numTrees(i<span class="number">-1</span>)*numTrees(n-i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">sum</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>显然，暴力递归明显会超时,我们需要优化:<br>我们先来看递归树(拿n=3举例)<br>i=1的情况:</p>
+<pre>          
+               numTrees(3)
+              /           \
+        numTrees(0)    numTrees(2)
+                       /         \
+                  numTrees(0)   numTrees(1)
+                                 /        \
+                            numTrees(0)  numTrees(0)
+</pre>    
+i=2的情况:
+<pre>
+               numTrees(3)
+              /           \
+         numTrees(1)    numTrees(1)
+         /         \    /         \
+    numTrees(0)   numTrees(0)    numTrees(0)              
+</pre>
+
+<p>发现numTrees(1)和numTrees(0)都有重复.固我们可以动态规划记录已经计算过的值:</p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public <span class="built_in">int</span> numTrees(<span class="built_in">int</span> n)&#123;</span><br><span class="line">     <span class="built_in">int</span>[] <span class="built_in">num</span>=<span class="keyword">new</span> <span class="built_in">int</span>[n+<span class="number">1</span>];</span><br><span class="line">     <span class="built_in">num</span>[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">     <span class="built_in">num</span>[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">     <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="built_in">num</span>[i]+=<span class="built_in">num</span>[j]*<span class="built_in">num</span>[i-j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="built_in">num</span>[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来我们看第二个问题:</p>
+<p>Given an integer <em>n</em>, generate all structurally unique <strong>BST’s</strong> (binary search trees) that store values 1 …&nbsp;<em>n</em>.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><strong>Input:</strong> 3
+<strong>Output:</strong>
+[
+&nbsp; [1,null,3,2],
+&nbsp; [3,2,null,1],
+&nbsp; [3,1,null,null,2],
+&nbsp; [2,1,3],
+&nbsp; [1,null,2,null,3]
+]
+<strong>Explanation:</strong>
+The above output corresponds to the 5 unique BST's shown below:
+
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+</pre>
+
+<h2 id="题意分析-1"><a href="#题意分析-1" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>这次加大了难度，输出所有的可能情况.<br>思路还是差不多，递归遍历左右子树:<br>但我们发现,递归的子树会有多种返回情况,而返回值只有一个,我们可以使用列表保存起来.<br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">List</span>&lt;TreeNode&gt; generateTrees(<span class="keyword">int</span> n)&#123;</span><br><span class="line">     <span class="keyword">if</span>(n&lt;<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();  <span class="comment">//如果n==0,直接返回空列表</span></span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">return</span> helper(<span class="number">1</span>,n);   <span class="comment">//递归遍历</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">List</span>&lt;TreeNode&gt; helper(<span class="keyword">int</span> start,<span class="keyword">int</span> end)&#123;</span><br><span class="line">    <span class="keyword">List</span>&lt;TreeNode&gt; res=<span class="keyword">new</span> ArrayList&lt;&gt;();  <span class="comment">//记录所有情况</span></span><br><span class="line">    <span class="keyword">if</span>(start&gt;end)&#123;  <span class="comment">//若区间左端点大于右端点，则为该结点为null,并返回</span></span><br><span class="line">       res.add(<span class="keyword">null</span>);</span><br><span class="line">       <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=start;i&lt;=end;i++)&#123;</span><br><span class="line">        <span class="keyword">List</span>&lt;TreeNode&gt; left=helper(start,i<span class="number">-1</span>);  <span class="comment">//遍历左子树,区间为[start,i-1]</span></span><br><span class="line">        <span class="keyword">List</span>&lt;TreeNode&gt; right=helper(i+<span class="number">1</span>,end);  <span class="comment">//遍历右子树,区间为[i+1,end]</span></span><br><span class="line">        <span class="keyword">for</span>(TreeNode l:left)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(TreeNode r:right)</span><br><span class="line">            &#123;</span><br><span class="line">                TreeNode root=<span class="keyword">new</span> TreeNode(i);  <span class="comment">//根节点</span></span><br><span class="line">                root.left=l;  <span class="comment">//根节点左子树</span></span><br><span class="line">                root.right=r;  <span class="comment">//根节点右子树</span></span><br><span class="line">                res.add(root); <span class="comment">//记录各种情况</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;  <span class="comment">//返回各种情况</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       </div>
         
@@ -283,10 +294,10 @@
             <hr>
             <div class="new-meta-box">
               
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-29T22:29:16+08:00">
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-07T13:00:03+08:00">
                   <a class="notlink">
                     <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-                    2019-03-29
+                    2019-04-07
                   </a>
                 </div>
               
@@ -306,9 +317,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/dp_5/" rel="prev" title="最大矩形和">
+                                <a href="/dp_8/" rel="prev" title="交错字符串">
                                   
-                                      最大矩形和
+                                      交错字符串
                                   
                                 </a>
                             </h4>
@@ -326,9 +337,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/dp_3/" rel="prev" title="通配符匹配">
+                                <a href="/dp_6/" rel="prev" title="扰乱字符串">
                                     
-                                        通配符匹配
+                                        扰乱字符串
                                     
                                 </a>
                             </h4>
@@ -399,7 +410,7 @@
 
 <script>
     window.subData = {
-        title: '编辑距离',
+        title: '不同的二叉搜索树Ⅰ和Ⅱ',
         tools: true
     }
 </script>
@@ -534,7 +545,7 @@
 </header>
 
     <div class="content pure">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Given-two-words-word1-and-word2-find-the-minimum-number-of-operations-required-to-convert-word1-to-word2"><span class="toc-text">Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析"><span class="toc-text">题意分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-text">动态规划:</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Given-n-how-many-structurally-unique-BST’s-binary-search-trees-that-store-values-1-…-n"><span class="toc-text">Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析"><span class="toc-text">题意分析:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-text">动态规划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析-1"><span class="toc-text">题意分析:</span></a>
     </li></div>
   </section>
 
