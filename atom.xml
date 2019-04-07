@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.kamike.cn/"/>
-  <updated>2019-04-07T06:19:02.605Z</updated>
+  <updated>2019-04-07T09:59:46.994Z</updated>
   <id>blog.kamike.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ,Ⅳ)</title>
+    <link href="blog.kamike.cn/dp_11/"/>
+    <id>blog.kamike.cn/dp_11/</id>
+    <published>2019-04-07T09:57:37.781Z</published>
+    <updated>2019-04-07T09:59:46.994Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/04/07/AfD06f.png" alt="AfD06f.png"><br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/04/07/AfD06f.png&quot; alt=&quot;AfD06f.png&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三角形最小路径和</title>
+    <link href="blog.kamike.cn/dp_10/"/>
+    <id>blog.kamike.cn/dp_10/</id>
+    <published>2019-04-07T06:37:46.592Z</published>
+    <updated>2019-04-07T09:54:34.859Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/04/07/AfDpYn.jpg" alt="AfDpYn.jpg"><br><a id="more"></a></p><p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</p><p>For example, given the following triangle</p><pre>[     [<strong>2</strong>],    [<strong>3</strong>,4],   [6,<strong>5</strong>,7],  [4,<strong>1</strong>,8,3]]</pre><p>The minimum path sum from top to bottom is <code>11</code> (i.e., <strong>2</strong> + <strong>3</strong> + <strong>5</strong> + <strong>1</strong> = 11).</p><p><strong>Note:</strong></p><p>Bonus point if you are able to do this using only <em>O</em>(<em>n</em>) extra space, where <em>n</em> is the total number of rows in the triangle.</p><h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析"></a>题意分析</h2><p>给你一个三角形,找出从上到下最短的路径,但每次只能选择相邻的子结点</p><hr><h3 id="递归-记忆化"><a href="#递归-记忆化" class="headerlink" title="递归+记忆化"></a>递归+记忆化</h3><p>如果每次都取子结点的最小值:</p><p><pre>[<br>     [<strong><em>2</em></strong>],<br>    [<strong><em>3</em></strong>,4],<br>   [6,<strong><em>5</em></strong>,1],<br>  [4,<strong><em>1</em></strong>,8,1]<br>]<br></pre><br>发现<strong>2+3+5+1=11</strong>不是最小值,而<strong>2+4+1+1=8</strong>才是<br>所以我们需要自底向上求到达某个结点的最小值.<br>我们定义二维数组dp[i][j]来表示第i个深度第j个结点从上到下的最小路径.<br>i:表示三角形的深度<br>j:表示该深度的第j个结点</p><p>不难得出递推关系式为:dp[i][j]=Math.min(dp[i+1][j],dp[i+1][j+1])+f(i,j)<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">可以用数学归纳法来证明:</span><br><span class="line">当深度depth=n时,对于任意j∈[<span class="string">1...n</span>],dp[<span class="string">n</span>][<span class="symbol">j</span>]均为该结点的最小值.</span><br><span class="line">假设当深度depth=k(k<span class="xml"><span class="tag">&lt;<span class="name">n)时,对于任意j∈[1...k],dp[k][j]为该节点从上到下的最小路径和</span></span></span></span><br><span class="line"><span class="xml">那么当深度depth=k-1时,对于任意j∈[1...k-1],dp[k-1][j]=min(dp[k][j],dp[k][j+1])+f(i,j),是该节点从上到下的最小路径和</span></span><br></pre></td></tr></table></figure></p><p>以下是代码:<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> minimumTotal(List&lt;List&lt;Integer&gt;&gt; triangle)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">int</span> m=triangle.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[m+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">    <span class="built_in">return</span> helper(triangle,<span class="number">0</span>,<span class="number">0</span>,dp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> helper(List&lt;List&lt;Integer&gt;&gt; lists,<span class="keyword">int</span> <span class="built_in">position</span>,<span class="keyword">int</span> depth,<span class="keyword">int</span>[][] dp)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="built_in">if</span>(depth==lists.<span class="built_in">size</span>()) <span class="built_in">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> left=dp[depth+<span class="number">1</span>][<span class="built_in">position</span>]==<span class="number">0</span>?helper(lists,<span class="built_in">position</span>,depth+<span class="number">1</span>,dp):dp[depth+<span class="number">1</span>][<span class="built_in">position</span>];   <span class="comment">//左结点的最小值</span></span><br><span class="line">    <span class="keyword">int</span> right=dp[depth+<span class="number">1</span>][<span class="built_in">position</span>+<span class="number">1</span>]==<span class="number">0</span>?helper(lists,<span class="built_in">position</span>+<span class="number">1</span>,depth+<span class="number">1</span>,dp):dp[depth+<span class="number">1</span>][<span class="built_in">position</span>+<span class="number">1</span>];  <span class="comment">//右结点的最小值</span></span><br><span class="line">    dp[depth][<span class="built_in">position</span>]=lists.<span class="built_in">get</span>(depth).<span class="built_in">get</span>(<span class="built_in">position</span>)+Math.<span class="built_in">min</span>(left,right); <span class="comment">//递推</span></span><br><span class="line">    <span class="built_in">return</span> dp[depth][<span class="built_in">position</span>];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p><p>当然也可以不用递归，利用循环自底向上算最小值即可:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">int</span> minimumTotal(List&lt;List&lt;Integer&gt;&gt; <span class="built_in">triangle</span>)&#123;</span><br><span class="line">   <span class="built_in">int</span>[] dp=<span class="keyword">new</span> <span class="built_in">int</span>[<span class="built_in">triangle</span>.<span class="built_in">size</span>()+<span class="number">1</span>];</span><br><span class="line">   <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="built_in">triangle</span>.<span class="built_in">size</span>();i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="built_in">int</span> j=<span class="number">0</span>;j&lt;=i;j++)&#123;</span><br><span class="line">         dp[j]=Math.<span class="built_in">min</span>(dp[j],dp[j+<span class="number">1</span>])+<span class="built_in">triangle</span>.<span class="built_in">get</span>(i).<span class="built_in">get</span>(j);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/04/07/AfDpYn.jpg&quot; alt=&quot;AfDpYn.jpg&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+    
+  </entry>
   
   <entry>
     <title>不同子序列</title>

@@ -176,6 +176,30 @@
           </div>
       
           <div class="archive-item archive-post mark">
+            <a href="/dp_11/">
+              <time>04-07</time>
+              <span class="title">
+                
+                  买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ,Ⅳ)
+                
+                
+              </span>
+            </a>
+          </div>
+      
+          <div class="archive-item archive-post mark">
+            <a href="/dp_10/">
+              <time>04-07</time>
+              <span class="title">
+                
+                  三角形最小路径和
+                
+                
+              </span>
+            </a>
+          </div>
+      
+          <div class="archive-item archive-post mark">
             <a href="/dp_9/">
               <time>04-07</time>
               <span class="title">
@@ -332,6 +356,44 @@
 
 
 
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
 
         </div>
         <aside class='l_side'>
@@ -384,9 +446,9 @@
         
           <li><a class="flat-box" title="/categories/java/" href="/categories/java/"><div class="name">java</div><div class="badge">(2)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(10)</div></a></li>
+          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(12)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/数据结构/动态规划/" href="/categories/数据结构/动态规划/"><div class="name">动态规划</div><div class="badge">(10)</div></a></li>
+          <li><a class="flat-box child" title="/categories/数据结构/动态规划/" href="/categories/数据结构/动态规划/"><div class="name">动态规划</div><div class="badge">(12)</div></a></li>
         
       </ul>
     </div>
