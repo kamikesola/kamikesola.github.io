@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ,Ⅳ) | kamike</title>
+  <title>买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ) | kamike</title>
   
   
 
@@ -174,7 +174,7 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ,Ⅳ)</h1>
+          <h1 class="title">买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ)</h1>
       
     
 
@@ -227,6 +227,80 @@
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
         <p><img src="https://s2.ax1x.com/2019/04/07/AfD06f.png" alt="AfD06f.png"><br><a id="more"></a></p>
+<h1 id="问题I"><a href="#问题I" class="headerlink" title="问题I:"></a>问题I:</h1><p>Say you have an array for which the <em>i</em><sup>th</sup> element is the price of a given stock on day <em>i</em>.</p>
+
+<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+
+<p>Note that you cannot sell a stock before you buy one.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><strong>Input:</strong> [7,1,5,3,6,4]
+<strong>Output:</strong> 5
+<strong>Explanation:</strong> Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+&nbsp;            Not 7-1 = 6, as selling price needs to be larger than buying price.
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><strong>Input:</strong> [7,6,4,3,1]
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> In this case, no transaction is done, i.e. max profit = 0.
+</pre>
+
+<h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>给出一个数组,第i个元素表示第i天股票的价格,你需要在第i天买入股票并在第j天卖出(j&gt;i,卖出必须在购买之后),要求获得的利润最大.</p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p><strong>方法一</strong><br>我们用a<sub>i</sub>来表示数组的元素(i为数组的下标,i∈[1…n]).<br>固我们需要求的目标为max(a<sub>j</sub>-a<sub>i</sub>)(其中j&gt;i).<br>我们用dp[i]来表示前i个数组元素的得到的利润最大值,假设最大值为a<sub>y</sub>-a<sub>x</sub>.<br>那么不难得出dp[i+1]=max(dp[i],a<sub>i+1</sub>-minprice),其中minprice为[0…i]中最低的价格.<br>那么最大的利润为dp[n-1].<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> maxProfit(<span class="keyword">int</span>[] prices)&#123;</span><br><span class="line">    <span class="keyword">int</span> n=prices.length;</span><br><span class="line">    <span class="built_in">if</span>(n&lt;=<span class="number">1</span>) <span class="built_in">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> res=prices[<span class="number">1</span>]-prices[<span class="number">0</span>],minprice=prices[<span class="number">0</span>];</span><br><span class="line">    <span class="built_in">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;n;i++)&#123;</span><br><span class="line">       minprice=Math.<span class="built_in">min</span>(prices[i<span class="number">-1</span>],minprice);</span><br><span class="line">       res=Math.<span class="built_in">max</span>(res,prices[i]-minprice);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">if</span>(res&lt;<span class="number">0</span>) <span class="built_in">return</span> <span class="number">0</span>;  <span class="comment">//利润&lt;0直接不参与交易</span></span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>方法二</strong><br>以a<sub>i</sub>-a<sub>i-1</sub>重新建立新数组:<br>[a<sub>1</sub>-a<sub>0</sub>,a<sub>2</sub>-a<sub>1</sub>,a<sub>3</sub>-<sub>2</sub>….a<sub>n</sub>-a<sub>n-1</sub>]<br>发现需要得到a<sub>j</sub>-a<sub>i</sub>:<br>只需累加a<sub>j</sub>-a<sub>j-1</sub>+a<sub>j-1</sub>-<sub>j-2</sub>+…a<sub>i+1</sub>-a<sub>i</sub>，即新数组中其中一段的和.<br>那么问题便转化为:求数组的最大子序列的和.<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> maxProfit(<span class="keyword">int</span>[] prices)&#123;</span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">max</span>=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;prices.lenth<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> diff=prices[i+<span class="number">1</span>]-prices[i];</span><br><span class="line">        <span class="built_in">if</span>(res+diff&lt;<span class="number">0</span>) res=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">else</span> res+=diff;</span><br><span class="line">        <span class="built_in">max</span>=Math.<span class="built_in">max</span>(<span class="built_in">max</span>,res);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="built_in">max</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="问题Ⅱ"><a href="#问题Ⅱ" class="headerlink" title="问题Ⅱ:"></a>问题Ⅱ:</h1><p>Say you have an array for which the <em>i</em><sup>th</sup> element is the price of a given stock on day <em>i</em>.</p>
+
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).</p>
+
+<p><strong>Note:</strong> You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><strong>Input:</strong> [7,1,5,3,6,4]
+<strong>Output:</strong> 7
+<strong>Explanation:</strong> Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+&nbsp;            Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><strong>Input:</strong> [1,2,3,4,5]
+<strong>Output:</strong> 4
+<strong>Explanation:</strong> Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+&nbsp;            Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are
+&nbsp;            engaging multiple transactions at the same time. You must sell before buying again.
+</pre>
+
+<p><strong>Example 3:</strong></p>
+
+<pre><strong>Input:</strong> [7,6,4,3,1]
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> In this case, no transaction is done, i.e. max profit = 0.</pre>
+
+<h2 id="题意分析-1"><a href="#题意分析-1" class="headerlink" title="题意分析"></a>题意分析</h2><p>与上一题不同,这题增加了要求,买卖可以进行多次</p>
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><p>不管三七二十一,只要碰到a<sub>i</sub>-a<sub>i-1</sub>&gt;0,若不加入，就会错失得到最大值,就计入利润总和:<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public int maxProfit(int[] prices)&#123;</span><br><span class="line">    int n=prices.<span class="built_in">length</span>;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;<span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    int res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">0</span>;<span class="built_in">i</span>&lt;n<span class="number">-1</span>;<span class="built_in">i</span>++)&#123;</span><br><span class="line">       <span class="keyword">if</span>(prices[<span class="built_in">i</span>+<span class="number">1</span>]&gt;prices[<span class="built_in">i</span>]) res+=prices[<span class="built_in">i</span>+<span class="number">1</span>]-prices[<span class="built_in">i</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="问题Ⅲ"><a href="#问题Ⅲ" class="headerlink" title="问题Ⅲ"></a>问题Ⅲ</h1><p>Say you have an array for which the <i>i</i><sup>th</sup> element is the price of a given stock on day <i>i</i>.</p>
+
+<p>Design an algorithm to find the maximum profit. You may complete at most <b>k</b> transactions.</p>
+
+<p><b>Note:</b><br><br>You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><strong>Input:</strong> [2,4,1], k = 2
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2.
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<p><pre><strong>Input:</strong> [3,2,6,5,0,3], k = 2<br><strong>Output:</strong> 7<br><strong>Explanation:</strong> Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4.<br>&nbsp;            Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.<br></pre></p>
+<h2 id="题意分析-2"><a href="#题意分析-2" class="headerlink" title="题意分析"></a>题意分析</h2><p>这题限制了交易次数,只能交易k次.</p>
+<h3 id="动态规划-1"><a href="#动态规划-1" class="headerlink" title="动态规划"></a>动态规划</h3><p>有了第一题的基础,解决这题只需将数组分成k段,分别计算k段的最大值,加起来便为局部的最大值,为什么是局部最大值呢,因为分成两段有很多种情况,这些最大值只是该情况下的最优值，而不是全局的最优值.<br><strong>我们用local[i][k]表示[0…i]进行k次交易,并且最后一次交易时在第i天卖出的最大值</strong><br><strong>用global[i][k]表示[0…i]进行k次交易的最大值</strong><br>那么可以得出递推式:<br><strong>local[i][j]=max(global[i-1][j-1]+diff,local[i-1][j]+diff)</strong>(diff表示第i天与第i-1天的价格差值,局部最优只能从j-1次交易的最大值中+价格差值和前一天的局部最优加上价格差值所产生)<br><strong>global[i][j]=max(global[i-1][j],local[i][j])</strong><br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public int maxProfit(int k, int[] prices) &#123;</span><br><span class="line">       int len=prices.<span class="built_in">length</span>;</span><br><span class="line">    	 <span class="keyword">if</span>(len==<span class="number">0</span> || len==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">if</span>(k&gt;=prices.<span class="built_in">length</span>) <span class="keyword">return</span> solveMaxProfit(prices);</span><br><span class="line">    	 int[][] local=new int[len][k+<span class="number">1</span>];</span><br><span class="line">    	 int[][] <span class="keyword">global</span>=new int[len][k+<span class="number">1</span>];</span><br><span class="line">    	 <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;len;<span class="built_in">i</span>++)</span><br><span class="line">    	 &#123;</span><br><span class="line">    		 int diff=prices[<span class="built_in">i</span>]-prices[<span class="built_in">i</span><span class="number">-1</span>];</span><br><span class="line">    		 <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">1</span>;<span class="built_in">j</span>&lt;=k;<span class="built_in">j</span>++)</span><br><span class="line">    		 &#123;</span><br><span class="line">    			 local[<span class="built_in">i</span>][<span class="built_in">j</span>]=Math.<span class="built_in">max</span>(<span class="keyword">global</span>[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>]+(diff&gt;=<span class="number">0</span>? diff:<span class="number">0</span>),local[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>]+diff);</span><br><span class="line">    			 <span class="keyword">global</span>[<span class="built_in">i</span>][<span class="built_in">j</span>]=Math.<span class="built_in">max</span>(<span class="keyword">global</span>[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>],local[<span class="built_in">i</span>][<span class="built_in">j</span>]);</span><br><span class="line">    		 &#125;</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 <span class="keyword">return</span> <span class="keyword">global</span>[len<span class="number">-1</span>][k];</span><br><span class="line">    &#125;</span><br><span class="line">    public int solveMaxProfit(int[] prices)</span><br><span class="line">    &#123;</span><br><span class="line">    	 int res=<span class="number">0</span>;</span><br><span class="line">    	 <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;prices.<span class="built_in">length</span>;<span class="built_in">i</span>++)</span><br><span class="line">    	 &#123;</span><br><span class="line">    		 <span class="keyword">if</span>(prices[<span class="built_in">i</span>]-prices[<span class="built_in">i</span><span class="number">-1</span>]&gt;<span class="number">0</span>)</span><br><span class="line">    		 &#123;</span><br><span class="line">    			 res+=prices[<span class="built_in">i</span>]-prices[<span class="built_in">i</span><span class="number">-1</span>];</span><br><span class="line">    		 &#125;</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考自"><a href="#参考自" class="headerlink" title="参考自:"></a>参考自:</h3><p><a href="https://www.cnblogs.com/grandyang/p/4295761.html" target="_blank" rel="noopener">https://www.cnblogs.com/grandyang/p/4295761.html</a><br><a href="https://www.cnblogs.com/TenosDoIt/p/3436457.html" target="_blank" rel="noopener">https://www.cnblogs.com/TenosDoIt/p/3436457.html</a></p>
 
       </div>
         
@@ -234,10 +308,10 @@
             <hr>
             <div class="new-meta-box">
               
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-07T17:59:46+08:00">
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-14T09:54:43+08:00">
                   <a class="notlink">
                     <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-                    2019-04-07
+                    2019-04-14
                   </a>
                 </div>
               
@@ -252,6 +326,25 @@
 
         
             <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/dp_12/" rel="prev" title="分割回文串Ⅱ">
+                                  
+                                      分割回文串Ⅱ
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/dp/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>dp</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
                 
                     <section class="next">
@@ -331,7 +424,7 @@
 
 <script>
     window.subData = {
-        title: '买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ,Ⅳ)',
+        title: '买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ)',
         tools: true
     }
 </script>
@@ -388,9 +481,9 @@
         
           <li><a class="flat-box" title="/categories/java/" href="/categories/java/"><div class="name">java</div><div class="badge">(2)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(12)</div></a></li>
+          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(15)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/数据结构/动态规划/" href="/categories/数据结构/动态规划/"><div class="name">动态规划</div><div class="badge">(12)</div></a></li>
+          <li><a class="flat-box child" title="/categories/数据结构/动态规划/" href="/categories/数据结构/动态规划/"><div class="name">动态规划</div><div class="badge">(15)</div></a></li>
         
       </ul>
     </div>
@@ -456,6 +549,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="pure">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content pure">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题I"><span class="toc-text">问题I:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析"><span class="toc-text">题意分析:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-text">动态规划</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题Ⅱ"><span class="toc-text">问题Ⅱ:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析-1"><span class="toc-text">题意分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#贪心"><span class="toc-text">贪心</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题Ⅲ"><span class="toc-text">问题Ⅲ</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意分析-2"><span class="toc-text">题意分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划-1"><span class="toc-text">动态规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考自"><span class="toc-text">参考自:</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
 
       
     
