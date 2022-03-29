@@ -5,9 +5,9 @@
   <subtitle>这是一个死宅的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="blog.kamike.cn/"/>
+  <link href="kamikesola.github.io/"/>
   <updated>2019-03-23T11:59:51.908Z</updated>
-  <id>blog.kamike.cn/</id>
+  <id>kamikesola.github.io/</id>
   
   <author>
     <name>kamike</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>总结java反射(二)</title>
-    <link href="blog.kamike.cn/reflect2/"/>
-    <id>blog.kamike.cn/reflect2/</id>
+    <link href="kamikesola.github.io/reflect2/"/>
+    <id>kamikesola.github.io/reflect2/</id>
     <published>2022-03-29T02:44:13.188Z</published>
     <updated>2019-03-23T11:59:51.908Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="java" scheme="blog.kamike.cn/categories/java/"/>
+      <category term="java" scheme="kamikesola.github.io/categories/java/"/>
     
     
-      <category term="反射" scheme="blog.kamike.cn/tags/%E5%8F%8D%E5%B0%84/"/>
+      <category term="反射" scheme="kamikesola.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
     
   </entry>
   
   <entry>
     <title>不同子序列</title>
-    <link href="blog.kamike.cn/dp_9/"/>
-    <id>blog.kamike.cn/dp_9/</id>
+    <link href="kamikesola.github.io/dp_9/"/>
+    <id>kamikesola.github.io/dp_9/</id>
     <published>2022-03-29T02:44:13.180Z</published>
     <updated>2019-04-07T06:19:02.605Z</updated>
     
@@ -53,19 +53,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>交错字符串</title>
-    <link href="blog.kamike.cn/dp_8/"/>
-    <id>blog.kamike.cn/dp_8/</id>
+    <link href="kamikesola.github.io/dp_8/"/>
+    <id>kamikesola.github.io/dp_8/</id>
     <published>2022-03-29T02:44:13.176Z</published>
     <updated>2019-04-07T05:39:13.216Z</updated>
     
@@ -77,19 +77,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>不同的二叉搜索树Ⅰ和Ⅱ</title>
-    <link href="blog.kamike.cn/dp_7/"/>
-    <id>blog.kamike.cn/dp_7/</id>
+    <link href="kamikesola.github.io/dp_7/"/>
+    <id>kamikesola.github.io/dp_7/</id>
     <published>2022-03-29T02:44:13.172Z</published>
     <updated>2019-04-07T05:00:03.109Z</updated>
     
@@ -101,19 +101,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>扰乱字符串</title>
-    <link href="blog.kamike.cn/dp_6/"/>
-    <id>blog.kamike.cn/dp_6/</id>
+    <link href="kamikesola.github.io/dp_6/"/>
+    <id>kamikesola.github.io/dp_6/</id>
     <published>2022-03-29T02:44:13.168Z</published>
     <updated>2019-04-07T02:46:56.306Z</updated>
     
@@ -125,19 +125,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>最大矩形和</title>
-    <link href="blog.kamike.cn/dp_5/"/>
-    <id>blog.kamike.cn/dp_5/</id>
+    <link href="kamikesola.github.io/dp_5/"/>
+    <id>kamikesola.github.io/dp_5/</id>
     <published>2022-03-29T02:44:13.163Z</published>
     <updated>2019-03-30T03:04:30.499Z</updated>
     
@@ -149,19 +149,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>编辑距离</title>
-    <link href="blog.kamike.cn/dp_4/"/>
-    <id>blog.kamike.cn/dp_4/</id>
+    <link href="kamikesola.github.io/dp_4/"/>
+    <id>kamikesola.github.io/dp_4/</id>
     <published>2022-03-29T02:44:13.159Z</published>
     <updated>2019-03-29T14:29:16.584Z</updated>
     
@@ -173,23 +173,23 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>通配符匹配</title>
-    <link href="blog.kamike.cn/dp_3/"/>
-    <id>blog.kamike.cn/dp_3/</id>
+    <link href="kamikesola.github.io/dp_3/"/>
+    <id>kamikesola.github.io/dp_3/</id>
     <published>2022-03-29T02:44:13.155Z</published>
     <updated>2019-03-29T12:28:21.522Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/03/29/ABFFC6.png" alt="ABFFC6.png"><br><a id="more"></a></p><h3 id="Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’"><a href="#Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’" class="headerlink" title="Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’."></a>Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’.</h3><p>‘?’ Matches any single character.<br>‘*’ Matches any sequence of characters (including the empty sequence).</p><p>The matching should cover the entire input string (not partial).</p><p>Note:</p><pre><code>s could be empty and contains only lowercase letters a-z.p could be empty and contains only lowercase letters a-z, and characters like ? or *.</code></pre><p>Example 1:</p><p>Input:<br>s = “aa”<br>p = “a”<br>Output: false<br>Explanation: “a” does not match the entire string “aa”.</p><p>Example 2:</p><p>Input:<br>s = “aa”<br>p = “<em>“<br>Output: true<br>Explanation: ‘</em>‘ matches any sequence.</p><p>Example 3:</p><p>Input:<br>s = “cb”<br>p = “?a”<br>Output: false<br>Explanation: ‘?’ matches ‘c’, but the second letter is ‘a’, which does not match ‘b’.</p><p>Example 4:</p><p>Input:<br>s = “adceb”<br>p = “<em>a</em>b”<br>Output: true<br>Explanation: The first ‘<em>‘ matches the empty sequence, while the second ‘</em>‘ matches the substring “dce”.</p><p>Example 5:</p><p>Input:<br>s = “acdcb”<br>p = “a*c?b”<br>Output: false</p><h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>与前一道<a href="http://blog.kamike.cn/dp_1/">表达式匹配</a>类似，不过比那道要简单.<br>给你两个字符串s和p,要求s和P能够匹配,‘？’表示能与任何字符匹配,’*’表示一个任何的序列，包括空序列.<br>我们还是用动态规划来做.</p><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>我们定义dp[i][j]为p的区间[0,i]与s的区间[0,j]是否匹配.<br>我们有两种情况:<br>1.dp[i][j]=dp[i-1][j] || (j&gt;0 &amp;&amp; dp[i][j-1]) || i==1,如果p[i-1]==’<em>‘.我们假设p[0…i-1]与s[0…j]已正确匹配,那么’</em>‘就代表空序列使得p[0…i]与s[0…j]继续匹配，我们又假设p[0…i]与s[0…j-1]已匹配,那么’*’继续延长序列使得p[0…i]与s[0…j]继续匹配.<br>2.dp[i][j]=(j&gt;0 &amp;&amp; dp[i-1][j-1] &amp;&amp; (p.charAt(i-1)==s.charAt(j-1) || p.charAt(i-1)==’?’)),如果p[i-1]==s[j-1]或p[i-1]==’?’.我们假设p[0…i-1]与s[0…j-1]已正确匹配,那么p[0…i]与s[0…j]匹配的充要条件就是p[i]=s[j].</p><p>以下是代码:<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public boolean isMatch(String s,String p)</span><br><span class="line">&#123;</span><br><span class="line">    int m=p.<span class="built_in">length</span>();</span><br><span class="line">    int n=s.<span class="built_in">length</span>();</span><br><span class="line">    int[][] dp=new int[m+<span class="number">1</span>][n+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=m;<span class="built_in">i</span>++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">0</span>;<span class="built_in">j</span>&lt;=n;<span class="built_in">j</span>++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'*'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>] || (<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span>][<span class="built_in">j</span><span class="number">-1</span>]) || <span class="built_in">i</span>==<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=(<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>] &amp;&amp; (p.chaAt(<span class="built_in">i</span><span class="number">-1</span>)==s.charAt(<span class="built_in">j</span><span class="number">-1</span>) || p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'?'</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[m][n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/03/29/ABFFC6.png" alt="ABFFC6.png"><br><a id="more"></a></p><h3 id="Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’"><a href="#Given-an-input-string-s-and-a-pattern-p-implement-wildcard-pattern-matching-with-support-for-‘-’-and-‘-’" class="headerlink" title="Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’."></a>Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for ‘?’ and ‘*’.</h3><p>‘?’ Matches any single character.<br>‘*’ Matches any sequence of characters (including the empty sequence).</p><p>The matching should cover the entire input string (not partial).</p><p>Note:</p><pre><code>s could be empty and contains only lowercase letters a-z.p could be empty and contains only lowercase letters a-z, and characters like ? or *.</code></pre><p>Example 1:</p><p>Input:<br>s = “aa”<br>p = “a”<br>Output: false<br>Explanation: “a” does not match the entire string “aa”.</p><p>Example 2:</p><p>Input:<br>s = “aa”<br>p = “<em>“<br>Output: true<br>Explanation: ‘</em>‘ matches any sequence.</p><p>Example 3:</p><p>Input:<br>s = “cb”<br>p = “?a”<br>Output: false<br>Explanation: ‘?’ matches ‘c’, but the second letter is ‘a’, which does not match ‘b’.</p><p>Example 4:</p><p>Input:<br>s = “adceb”<br>p = “<em>a</em>b”<br>Output: true<br>Explanation: The first ‘<em>‘ matches the empty sequence, while the second ‘</em>‘ matches the substring “dce”.</p><p>Example 5:</p><p>Input:<br>s = “acdcb”<br>p = “a*c?b”<br>Output: false</p><h2 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析:"></a>题意分析:</h2><p>与前一道<a href="http://blog.kamike.cn/dp_1/" target="_blank" rel="noopener">表达式匹配</a>类似，不过比那道要简单.<br>给你两个字符串s和p,要求s和P能够匹配,‘？’表示能与任何字符匹配,’*’表示一个任何的序列，包括空序列.<br>我们还是用动态规划来做.</p><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>我们定义dp[i][j]为p的区间[0,i]与s的区间[0,j]是否匹配.<br>我们有两种情况:<br>1.dp[i][j]=dp[i-1][j] || (j&gt;0 &amp;&amp; dp[i][j-1]) || i==1,如果p[i-1]==’<em>‘.我们假设p[0…i-1]与s[0…j]已正确匹配,那么’</em>‘就代表空序列使得p[0…i]与s[0…j]继续匹配，我们又假设p[0…i]与s[0…j-1]已匹配,那么’*’继续延长序列使得p[0…i]与s[0…j]继续匹配.<br>2.dp[i][j]=(j&gt;0 &amp;&amp; dp[i-1][j-1] &amp;&amp; (p.charAt(i-1)==s.charAt(j-1) || p.charAt(i-1)==’?’)),如果p[i-1]==s[j-1]或p[i-1]==’?’.我们假设p[0…i-1]与s[0…j-1]已正确匹配,那么p[0…i]与s[0…j]匹配的充要条件就是p[i]=s[j].</p><p>以下是代码:<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public boolean isMatch(String s,String p)</span><br><span class="line">&#123;</span><br><span class="line">    int m=p.<span class="built_in">length</span>();</span><br><span class="line">    int n=s.<span class="built_in">length</span>();</span><br><span class="line">    int[][] dp=new int[m+<span class="number">1</span>][n+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(int <span class="built_in">i</span>=<span class="number">1</span>;<span class="built_in">i</span>&lt;=m;<span class="built_in">i</span>++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(int <span class="built_in">j</span>=<span class="number">0</span>;<span class="built_in">j</span>&lt;=n;<span class="built_in">j</span>++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'*'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span>] || (<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span>][<span class="built_in">j</span><span class="number">-1</span>]) || <span class="built_in">i</span>==<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                dp[<span class="built_in">i</span>][<span class="built_in">j</span>]=(<span class="built_in">j</span>&gt;<span class="number">0</span> &amp;&amp; dp[<span class="built_in">i</span><span class="number">-1</span>][<span class="built_in">j</span><span class="number">-1</span>] &amp;&amp; (p.chaAt(<span class="built_in">i</span><span class="number">-1</span>)==s.charAt(<span class="built_in">j</span><span class="number">-1</span>) || p.charAt(<span class="built_in">i</span><span class="number">-1</span>)==<span class="string">'?'</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[m][n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -197,19 +197,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>最长合法括号</title>
-    <link href="blog.kamike.cn/dp_2/"/>
-    <id>blog.kamike.cn/dp_2/</id>
+    <link href="kamikesola.github.io/dp_2/"/>
+    <id>kamikesola.github.io/dp_2/</id>
     <published>2022-03-29T02:44:13.150Z</published>
     <updated>2019-03-29T10:58:49.924Z</updated>
     
@@ -221,19 +221,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>单词拆分Ⅱ</title>
-    <link href="blog.kamike.cn/dp_14/"/>
-    <id>blog.kamike.cn/dp_14/</id>
+    <link href="kamikesola.github.io/dp_14/"/>
+    <id>kamikesola.github.io/dp_14/</id>
     <published>2022-03-29T02:44:13.146Z</published>
     <updated>2019-04-14T04:26:32.763Z</updated>
     
@@ -245,19 +245,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>单词拆分</title>
-    <link href="blog.kamike.cn/dp_13/"/>
-    <id>blog.kamike.cn/dp_13/</id>
+    <link href="kamikesola.github.io/dp_13/"/>
+    <id>kamikesola.github.io/dp_13/</id>
     <published>2022-03-29T02:44:13.137Z</published>
     <updated>2019-04-14T04:25:50.494Z</updated>
     
@@ -269,19 +269,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>分割回文串Ⅱ</title>
-    <link href="blog.kamike.cn/dp_12/"/>
-    <id>blog.kamike.cn/dp_12/</id>
+    <link href="kamikesola.github.io/dp_12/"/>
+    <id>kamikesola.github.io/dp_12/</id>
     <published>2022-03-29T02:44:13.122Z</published>
     <updated>2019-04-14T04:27:30.589Z</updated>
     
@@ -293,19 +293,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>买卖股票的最佳时机(Ⅰ,Ⅱ,Ⅲ)</title>
-    <link href="blog.kamike.cn/dp_11/"/>
-    <id>blog.kamike.cn/dp_11/</id>
+    <link href="kamikesola.github.io/dp_11/"/>
+    <id>kamikesola.github.io/dp_11/</id>
     <published>2022-03-29T02:44:13.117Z</published>
     <updated>2019-04-14T01:54:43.440Z</updated>
     
@@ -317,19 +317,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>三角形最小路径和</title>
-    <link href="blog.kamike.cn/dp_10/"/>
-    <id>blog.kamike.cn/dp_10/</id>
+    <link href="kamikesola.github.io/dp_10/"/>
+    <id>kamikesola.github.io/dp_10/</id>
     <published>2022-03-29T02:44:13.114Z</published>
     <updated>2019-04-07T09:54:34.859Z</updated>
     
@@ -341,19 +341,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>表达式匹配</title>
-    <link href="blog.kamike.cn/dp_1/"/>
-    <id>blog.kamike.cn/dp_1/</id>
+    <link href="kamikesola.github.io/dp_1/"/>
+    <id>kamikesola.github.io/dp_1/</id>
     <published>2022-03-29T02:44:13.111Z</published>
     <updated>2019-03-27T05:00:52.026Z</updated>
     
@@ -365,19 +365,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>最长回文子串</title>
-    <link href="blog.kamike.cn/dp/"/>
-    <id>blog.kamike.cn/dp/</id>
+    <link href="kamikesola.github.io/dp/"/>
+    <id>kamikesola.github.io/dp/</id>
     <published>2022-03-29T02:44:13.107Z</published>
     <updated>2019-03-26T08:07:22.439Z</updated>
     
@@ -389,19 +389,19 @@
     
     </summary>
     
-      <category term="数据结构" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="动态规划" scheme="blog.kamike.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="动态规划" scheme="kamikesola.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="dp" scheme="blog.kamike.cn/tags/dp/"/>
+      <category term="dp" scheme="kamikesola.github.io/tags/dp/"/>
     
   </entry>
   
   <entry>
     <title>总结java反射(一)</title>
-    <link href="blog.kamike.cn/hello-world/"/>
-    <id>blog.kamike.cn/hello-world/</id>
+    <link href="kamikesola.github.io/hello-world/"/>
+    <id>kamikesola.github.io/hello-world/</id>
     <published>2022-03-28T04:56:41.076Z</published>
     <updated>2019-03-23T12:00:18.833Z</updated>
     
@@ -413,10 +413,10 @@
     
     </summary>
     
-      <category term="java" scheme="blog.kamike.cn/categories/java/"/>
+      <category term="java" scheme="kamikesola.github.io/categories/java/"/>
     
     
-      <category term="反射" scheme="blog.kamike.cn/tags/%E5%8F%8D%E5%B0%84/"/>
+      <category term="反射" scheme="kamikesola.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
     
   </entry>
   
